@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZ LAB - Simulator Jungkat Jungkit Sederhana</title>
+    <link rel="stylesheet" href="../css/style5.css">
+    <link rel="stylesheet" href="../css/stylesidebar.css">
+    <script src="../js/jungkatjungkit.js"></script>
+
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../image/Sign In.png">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <ul class="submenu">
+                    <li><a href="bidangmiring.html">Hukum Newton pada Bidang Miring</a></li>
+                    <li><a href="jungkatjungkit.html">Jungkat Jungkit Sederhana</a></li>
+                </ul>
+                <li><a href="saveprogress.html">Save Progress</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h2>Jungkat Jungkit Sederhana</h2>
+        
+        <div class="outer-container">
+            <div class="simulator-area">
+                <div class="jungkat-jungkit-container">
+                    <div class="load-area left-load" id="left-load" ondrop="drop(event, 'left')" ondragover="allowDrop(event)"></div>
+                    <div class="fulcrum" id="fulcrum">
+                        <div class="beam" id="beam"></div>
+                        <div class="triangle"></div>
+                    </div>
+                    <div class="load-area right-load" id="right-load" ondrop="drop(event, 'right')" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="button-container">
+                    <button class="restart-button" onclick="reset()">Restart</button>
+                    <button class="save-button" onclick="saveProgress()">Save</button>
+                </div>
+            </div>
+            
+            <div class="weight-selection">
+                <h3>Pilihan Beban :</h3>
+                <div class="weights">
+                    <button class="weight-button" draggable="true" ondragstart="drag(event)" data-weight="1">1 kg</button>
+                    <button class="weight-button" draggable="true" ondragstart="drag(event)" data-weight="2">2 kg</button>
+                    <button class="weight-button" draggable="true" ondragstart="drag(event)" data-weight="5">5 kg</button>
+                    <button class="weight-button" draggable="true" ondragstart="drag(event)" data-weight="10">10 kg</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jungkat_jungkit.js"></script>
+</body>
+</html>

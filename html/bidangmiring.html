@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIZ LAB - Simulator Bidang Miring</title>
+    <link rel="stylesheet" href="../css/style4.css">
+    <link rel="stylesheet" href="../css/stylesidebar.css">
+    <script defer src="../js/bidangmiring.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="../image/Sign In.png">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="simulator.html">Simulator</a></li>
+                <ul class="submenu">
+                    <li><a href="bidangmiring.html">Hukum Newton pada Bidang Miring</a></li>
+                    <li><a href="jungkatjungkit.html">Jungkat Jungkit Sederhana</a></li>
+                </ul>
+                <li><a href="saveprogress.html">Save Progress</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <h2>Hukum Newton pada Bidang Miring</h2>
+        
+        <div class="outer-container">
+            <div class="simulator-content">
+                <div class="triangle-container" id="triangleContainer">
+                    <canvas id="simulationCanvas" width="450" height="290"></canvas>
+                </div>
+                
+                <div class="parameters">
+                    <h3>Parameter</h3>
+                    <label for="mass">Massa Beban (kg)</label>
+                    <input type="number" id="mass" min="1" max="10" value="5">
+                    
+                    <label for="angle">Sudut (derajat): <span id="angleDisplay">30</span></label>
+                    <input type="range" id="angle" min="1" max="75" value="30" oninput="document.getElementById('angleDisplay').textContent = this.value">
+                    
+                    <label for="friction">Koefisien Gesekan: <span id="frictionDisplay">0.25</span></label>
+                    <input type="range" id="friction" min="0" max="1" step="0.01" value="0.25" oninput="document.getElementById('frictionDisplay').textContent = this.value">
+                    
+                    <label for="baseLength">Panjang Dasar (m)</label>
+                    <input type="number" id="baseLength" min="1" max="10" value="5">
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="executeButton">Execute</button>
+                <button id="stopButton">Restart</button>
+                <button id="saveButton">Save</button>
+            </div>
+            
+            <div class="results">
+                <h3>Hasil Perhitungan :</h3>
+                <div class="result-items">
+                    <p>• Berat (W): <span id="weightResult">0.00</span></p>
+                    <p>• Gaya kubus menuruni bidang (Wx): <span id="wxResult">0.00</span></p>
+                    <p>• Komponen Berat sumbu-y (Wy): <span id="wyResult">0.00</span></p>
+                    <p>• Kecepatan kotak: <span id="velocityResult">0.00</span></p>
+                    <p>• Waktu sampai ke dasar: <span id="timeResult">0.00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+.main-content {
+    flex: 1;
+    padding: 20px 40px;
+    background-color: #F7F9FC;
+}
+
+.profile-title {
+    text-align: left;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+    align-self: flex-start;
+
+}
+
+.outer-container {
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture {
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile-picture-name {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.profile-picture img {
+    font-size: 60px;
+    color: #333;
+    padding: 20px;
+    margin-top: 5px;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-form label {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.profile-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 400px;
+}
+
+.button-group {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.change-button, .cancel-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.change-button {
+    background-color: #2E3A59;
+    color: white;
+}
+
+.change-button:hover {
+    background-color: #4A5D8A;
+}
+
+.cancel-button {
+    background-color: #E0E0E0;
+    color: #555;
+}
+
+.cancel-button:hover {
+    background-color: #bebebe;
+}
+
+.logout {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
